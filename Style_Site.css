@@ -1,0 +1,711 @@
+* /* Réinitialisation des différentes marges et bordures */
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body /* Police de caractère principale  */
+{
+  font-family: "Open Sans", sans-serif;
+}
+
+
+
+/* --------------------------------------------------------------------------------------
+---------------------------------- MENU DU HAUT (FIXE) ----------------------------------
+-------------------------------------------------------------------------------------- */
+
+.navbar /* Barre de navigation */
+{
+    width: 100%;                    /* Prend toute la largeur de la page */
+    display: flex;                  /* Utilise Flexbox pour aligner les blocs enfants horizontalement */
+    position: fixed;                /* Le menu reste toujours visible en haut lors du défilement */
+    align-items: center;            /* Centre verticalement le logo, le menu et le bouton */
+    padding: 10px 20px;             /* Espace intérieur vertical puis horizontal de la barre de navigation*/
+    z-index: 1000;                  /* Priorité de superposition, pour que le menu soit au-dessus du contenu */
+
+    background-color: #ffffff;    /* Couleur de fond bleu du menu */
+}
+
+.logo /* Conteneur du logo en haut */
+{
+    height: 100px;                 /* Hauteur du conteneur logo */
+}
+
+.menu /* Menu (partie texte centrale) */
+{
+    display: flex;                  /* Affiche les éléments du menu horizontalement */
+    padding:10px;                   /* Espace intérieur autour du menu */
+    list-style: none;               /* Supprime les puces de la liste */
+    justify-content: space-evenly;  /* Espace égal entre les éléments <li> */
+    flex: 1;                        /* Occupe tout l’espace disponible */
+    align-items: center;            /* Centre verticalement le menu */
+}
+
+.menu li a /* Propriété du texte du menu */
+{
+  padding: 10px 10px;             /* Espace intérieur du bouton : vertical et horizontal */
+  text-decoration: none;          /* Supprime le soulignement des liens */
+  display: inline-block;          /* Pour que le centrage fonctionne proprement si sur 2 lignes */
+  text-align: center;             /* Centre le texte à l’intérieur du lien */
+  color: rgba(0, 90, 114);      /* Couleur du texte des liens */
+  border-radius: 30px;            /* Bords arrondis du bouton */
+  font-size: 30px;                /* Taille de la police */
+  transition: background 0.3s;    /* Effet fluide lorsqu'il y aura un survol */
+}
+
+.navbar ul li a:hover /* Au survol du texte avec la souris */
+{
+  background-color: rgba(0, 90, 114, 0.2);
+}
+
+.btn-billetterie /* Propriété du bouton "Billeterie" */
+{
+    padding: 10px 25px;                     /* Espace intérieur du bouton : vertical et horizontal */
+    background-color: rgba(0, 90, 114);   /* Couleur du bouton */
+    color: white;                         /* Couleur du texte du bouton */
+    border-radius: 30px;                    /* Bords arrondis du bouton */
+    text-decoration: none;                  /* Supprime le soulignement du lien */
+    font-size: 30px;                        /* Taille de la police */
+    transition: background 0.3s;            /* Effet fluide lorsqu'il y aura un survol */
+}
+
+.btn-billetterie:hover /* Au survol du bouton avec la souris */
+{
+  background-color: rgba(255, 119, 106);
+}
+
+
+
+/* --------------------------------------------------------------------------------------
+--------------------------------- PARAMETRAGE DES TEXTES --------------------------------
+-------------------------------------------------------------------------------------- */
+
+#accueil, #qui-sommes-nous, #notre-exposition, #nous-rejoindre
+{
+  text-align: center;               /* Centre le texte qu'il y aura à l’intérieur du bloc */
+  color: white;                   /* Texte en blanc pour contraster avec l’image */
+  text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour lisibilité */
+}
+
+/* Les titres */
+#accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+{
+  font-size: 6rem;                                /* Taille de la police */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour lisibilité */
+  font-family: 'Montserrat', sans-serif;          /* Applique la police Montserrat */
+}
+
+
+#texte-gauche h2, #texte-bas h2, #galerie figcaption /* Textes sous "Qui sommes-nous ?" et Légendes des images de "Notre exposition" */
+{
+  font-weight: 400;         /* 400 = regular (pas bold) */
+  font-size: 1.9rem;        /* Taille du texte du sous-titre */
+  margin-bottom: 20px;      /* espace sous chaque h2 */
+}
+
+
+
+/* --------------------------------------------------------------------------------------
+---------------------------------- PARAMETRAGE DES FONDS --------------------------------
+-------------------------------------------------------------------------------------- */
+
+#qui-sommes-nous, #notre-exposition, #accueil /* Bloc du texte et de l'image */
+{
+  padding-top: 100px; /* Pour débuter sous le menu */
+  
+  background-color: rgba(0, 90, 114);
+}
+
+
+
+/* --------------------------------------------------------------------------------------
+------------------------------------ SECTION ACCUEIL ------------------------------------
+-------------------------------------------------------------------------------------- */
+
+#accueil /* Section complète de l'image et du texte */
+{
+  position: relative;       /* Permet de centrer le texte qu'il y aura à l'intérieur du bloc */
+  width: 100%;              /* La section occupe toute la largeur de la page */
+  height: 70vh;             /* Hauteur = 70% de la hauteur de la fenêtre du navigateur */
+  background-color: rgba(0, 90, 114, 0.2);
+}
+
+.accueil-image /* Bloc de l'image */
+{
+  width: 100%;              /* L’image occupe toute la largeur de la section */
+  height: 100%;             /* L’image occupe toute la hauteur de la section */
+  object-fit: cover;        /* L’image garde ses proportions et remplit toute la zone */
+  display: block;           /* Évite un petit espace blanc sous l’image. L'image colle parfaitement au bas de son conteneur */
+}
+
+#accueil-text /* Bloc du texte */
+{
+  width: 100%;                      /* Occupe toute la largeur */
+  position: absolute;               /* Positionne le texte par-dessus et au centre l’image */
+  top: 60%;                         /* Ajuste le bloc verticalement */
+  left: 50%;                        /* Ajuste le bloc horizontalement */
+  transform: translate(-50%, -50%); /* Ajuste pour être centré parfaitement */
+}
+
+#accueil-text p /* Texte sous "ÉCHOS MARINS" */
+{
+  font-size: 3rem;        /* Taille du texte du sous-titre */
+  margin-top: 10px;       /* Espace au-dessus du paragraphe */
+}
+
+#image-droite-invisible /* Logo de l'hippocampe  qui ne s'affiche qu'en Responsive (sous le texte). L'autre sera masqué en Responsive pour suivre l'ordre de la maquette */
+{
+  display: none;
+}
+
+
+
+/* --------------------------------------------------------------------------------------
+----------------------------------- QUI SOMMES-NOUS ? -----------------------------------
+-------------------------------------------------------------------------------------- */
+
+#texte-image /* Conteneur texte + image sur la même ligne */
+{
+  display: flex;             /* Affiche les éléments du menu horizontalement */
+  align-items: center;       /* Centre verticalement le texte et l'image */
+}
+
+#texte-gauche
+{
+  flex: 80%;                  /* Le bloc occupe environ 80% de l'espace disponible dans son conteneur flex parent */
+  min-width: 250px;           /* Largeur minimale du bloc = 250px, même si l’écran est plus petit */
+  padding: 10px;              /* Ajoute un espace intérieur de 10px tout autour du bloc */
+}
+
+#image-droite
+{
+  height:100%;      /* Le bloc prend la hauteur de son parent */
+  flex: 20%;         /* Ce bloc (à droite) prend 20% de la largeur */
+  min-width: 150px;  /* Largeur minimale du bloc */       
+}
+
+#image-droite img
+{
+  height:100%;      /* Le bloc prend la hauteur de son parent */
+  width: auto;      /* Largeur proportionnelle à la hauteur */
+  max-width: 100%;  /* Ne dépasse jamais la largeur du conteneur */
+  min-width: 200px; /* LArgeur minimum de l'image */
+}
+
+#texte-bas
+{
+  padding: 10px;    /* Ajoute un espace intérieur de 10px tout autour du bloc */
+}
+
+
+
+/* --------------------------------------------------------------------------------------
+------------------------------------ NOTRE EXPOSITION -----------------------------------
+-------------------------------------------------------------------------------------- */
+
+#notre-exposition /* Section complète */
+{
+  padding-bottom: 20px;     /* Espace sous la section */
+  text-align: center;       /* Centre le texte et les éléments enfants horizontalement */
+}
+
+#galerie /* ---------- GALERIE PHOTOS ---------- */
+{
+  width: 100%; 
+  display: grid;                            /* Utilise la mise en page en grille */
+  grid-template-columns: repeat(3, 1fr);    /* Crée 3 colonnes de largeur égale. Pareil que "grid-template-columns: 1fr 1fr 1fr" */
+  gap: 70px;                                /* Espace entre chaque élément de la grille */
+  max-width: 1500px;                        /* Limite la largeur totale de la galerie */
+  margin: 0 auto;                           /* Centre la galerie horizontalement dans la page (margin-topet margin-bottom = 0 */
+}
+
+#galerie img
+{
+  width: 100%;                                            /* L’image prend toute la largeur disponible de son conteneur */
+  max-width: 350px;                                       /* Nee dépasse jamais 350px de large */
+  border: 6px solid #fff;                               /* Bande blanche autour des images */
+  border-radius: 6px;                                     /* Arrondit les coins des images */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);              /* Ajoute une ombre douce sous les images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Permet de rendre fluide les animations au survol */
+}
+
+#galerie img:hover
+{
+  transform: scale(1.03);                    /* Agrandit légèrement l’image au survol */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);  /* Accentue l’ombre pour un effet de relief */
+}
+
+
+/* --------------------------------------------------------------------------------------
+------------------------------------- NOUS REJOINDRE ------------------------------------
+-------------------------------------------------------------------------------------- */
+
+#nous-rejoindre /* Section complète : Bloc "Rejoindre" + Bloc "Formulaire" + Bloc "Logo_fin" */
+{
+  display: flex;                  /* Aligne les éléments horizontalement (titre, formulaire, logo) */
+  justify-content: space-between; /* Espace égal entre les blocs */
+  align-items: center;            /* Centre verticalement chaque bloc dans la hauteur du conteneur */
+  /* height: 200px;                  /* Hauteur fixe de la section */
+  background-color: #ffffff;    /* Couleur de fond (bleu océan) */
+  color: rgba(255, 119, 106);   /* Couleur du texte */
+  gap: 40px;                      /* Espace entre les blocs */
+  padding: 20px;
+}
+
+#rejoindre /* --------------------------------------------------- PARTIE NOUS REJOINDRE, A GAUCHE */
+{
+  height: 100%;           /* Prend 100% de la hauteur de son parent */
+  flex: 50%;              /* 50% de la largeur totale */
+  text-align: center;     /* Centre le texte */
+  border-right: 3px solid black; /* Bordure à droite : Épaisseur + style + couleur */
+}
+
+#rejoindre h1
+{
+  font-size: 3rem;      /* Taille du titre "NOUS REJOINDRE */
+  margin-bottom: 10px;  /* Espace sous le titre */
+}
+
+#rejoindre p
+{
+  font-size: 1.3rem;                              /* Taille du texte */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);  /* Ajoute une ombre pour lisibilité */
+}
+
+#reseaux /* Conteneur des logos de réseaux sociaux */
+{
+  display: flex;            /* Aligne les logos sur une ligne */
+  justify-content: center;  /* Centre le groupe de logos dans le conteneur */
+  align-items: center;      /* Centre verticalement (utile si on change la hauteur plus tard) */
+  gap: 30px;                /* <-- Espace entre les images */
+  margin-top: 15px;         /* Espace au-dessus des logos */
+}
+
+#reseaux img /* Style pour les images de logos */
+{
+  height: 50px;                     /* Fixe la hauteur à 50px */
+  width: auto;                      /* Conservation les proportions d’origine */
+  transition: transform 0.3s ease;  /* Animation douce au survol (optionnel) */
+}
+
+#reseaux img:hover /* Au survol avec la souris */
+{
+  transform: scale(1.1); /* Agrandit légèrement le logo quand on passe la souris */
+  cursor: pointer;
+}
+
+
+#formulaire /* --------------------------------------------------- PARTIE FORMULAIRE, AU CENTRE */
+{
+  flex: 35%;                /* 35% de la largeur totale */
+  display: flex;            /* Gestion du positionnement des blocs enfants */
+  flex-direction: column;   /* Met les éléments les uns sous les autres */
+  align-items: flex-start;  /* Aligne le contenu à gauche */
+  gap: 10px;                /* Espace entre chaque champ */
+  padding-left: 20px;
+}
+
+
+#formulaire > div /* Tous les div, enfants de Formulaire */
+{
+  width: 100%;                 /* Tous les blocs font la même largeur */
+  max-width: 350px;            /* Même limite que les champs */
+}
+
+#formulaire label /* Style des libellés des champs texte */
+{
+  display: block;          /* Chaque label prend toute la largeur de sa ligne */
+  text-align: left;        /* Aligne le texte du label à gauche */
+  width: 100%;             /* S’assure qu’il occupe bien toute la largeur du conteneur parent */
+  margin-bottom: 5px;      /* Petit espace entre le label et l’input */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour lisibilité */
+}
+
+#formulaire input /* Style des champs texte */
+{
+  width: 100%;        /* Occupe toute la largeur disponible */
+  min-width: 250px;   /* Pas plus pêtit que 250px */
+  max-width: 350px;   /* Largeur maximale pour éviter que ce soit trop large */
+  padding: 10px;      /* Espacement interne */
+  border: none;       /* Supprime la bordure par défaut */
+  outline: none;      /* Supprime le contour bleu par défaut sur clic */
+  background-color: rgba(255, 119, 106, 0.2);
+}
+
+#formulaire button /* Style du bouton "Envoyer" */
+{
+  background-color: rgba(255, 119, 106);    /* Couleur du bouton */
+  margin-top: 4px;
+  border: none;                               /* Supprime la bordure */
+  border-radius: 6px;                         /* Coins arrondis */
+  padding: 10px 20px;                         /* Taille du bouton */
+  cursor: pointer;                            /* Curseur "main" survol */
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;                           /* Texte légèrement plus gras */
+  color: white;
+  transition: background 0.3s ease;           /* Animation douce au survol */
+}
+
+
+#formulaire button:hover /* Effet au survol du bouton "Envoyer" */
+{
+  background-color: rgba(0, 90, 114);
+}
+
+
+#logo_fin /* --------------------------------------------------- PARTIE LOGO DE FIN, A DROITE */
+{
+  flex: 10%; /* Le reste de l’espace (10%) */
+  display: flex; /* Utilise Flexbox pour centrer */
+  justify-content: center; /* Centre horizontalement le logo */
+  align-items: center; /* Centre verticalement le logo */
+  height: 200px;                  /* Hauteur fixe de la section */
+}
+
+#logo_fin img /* Style du logo */
+{
+  height: 100%; /* Remplit la hauteur du conteneur */
+  width: auto;  /* Conserve le ratio */
+  object-fit: contain; /* Ajuste l’image pour qu’elle soit entièrement visible */
+}
+
+
+
+footer /* Style du footer */
+{
+  padding: 10px;
+  margin: 0px;
+  border-top: 3px solid black; /* Épaisseur + style + couleur */
+  text-align: center;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------
+----------------------------------------- PARTIE RESPONSIVE (pour petits écrans) ----------------------------------------
+---------------------------------------------------------------------------------------------------------------------- */
+
+
+                                  @media (max-width: 1400px)
+{
+
+  /* --------------------------------------------------------------------------------------
+  --------------------------------- PARAMETRAGE DES TEXTES --------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  .menu li a, .btn-billetterie /* Propriété du texte du menu */
+  {
+    font-size: 22px;                /* Taille de la police */
+  }
+
+} /* Fin @media (max-width: 1400px) */
+
+
+
+
+                                  @media (max-width: 1000px)
+{
+  /* --------------------------------------------------------------------------------------
+  ---------------------------------- MENU DU HAUT (FIXE) ----------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  .navbar /* Menu de navigation de l'accueil */
+  {
+    flex-direction: column;       /* Les 3 blocs : Logo, btn-billetterie et menu vont s'empiler verticalement */
+    align-items: center;          /* Les blocs seront centrés horizontalement dans la colonne */
+    gap: 10px;                    /* Espace entre chaque blocs */
+
+    background-color: rgba(0, 90, 114);
+    padding:0;                    /* Retrait des marges pour que le menu s'affiche sur tout la largeur */
+  }
+
+    .logo
+    {
+      order: 1;                     /* Le bloc "logo" s'affichera en 1er (au dessus) */
+    }
+    
+    .navbar img /* Logo en haut */
+    {
+      height: 130px;                 /* Hauteur du logo au dessus du bouton "BILLETERIE" */
+    }
+
+    .btn-billetterie
+    {
+      order: 2;                     /* Le bloc "btn-billetterie"" s'affichera sous le logo */
+
+      font-size: 22px;
+      background-color: rgb(255, 255, 255);
+      color: rgba(0, 90, 114);;
+    }
+
+    .menu
+    {
+      order: 3;                     /* Le bloc "menu"" s'affichera sous le bouton */
+      flex-direction: row;          /* Le menu reste à l'horizontale */
+      justify-content: center;      /* Centré horizontalement */
+      flex-wrap: nowrap;            /* Reste sur une seule ligne */
+      gap: 15px;
+      /* overflow-x: auto;             /* Si écran trop petit, permet le défilement horizontal */
+      
+      width: 100%;
+      padding: 20px ;
+      background-color: #ffffff;
+    }
+
+    
+
+  /* --------------------------------------------------------------------------------------
+  --------------------------------- PARAMETRAGE DES TEXTES --------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  /* Les titres */
+  #accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+  {
+    font-size: 4rem;                                /* Taille de la police */
+  }
+
+  #accueil-text p /* Texte sous "ÉCHOS MARINS" */
+  {
+    font-size: 2rem;        /* Taille du texte du sous-titre */
+  }
+
+
+  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
+  #texte-gauche h2, #texte-bas h2, #galerie figcaption
+  {
+    font-size: 1.4rem;
+  }
+
+
+  #accueil-text, #qui-sommes-nous, #notre-exposition, #nous-rejoindre /* Pour débuter sous le menu */
+  {
+    padding-top: 280px;
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  ------------------------------------ SECTION ACCUEIL ------------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #accueil-text
+  {
+    top: 50%;  /* centre verticalement */
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  ------------------------------- SECTION QUI SOMMES-NOUS ? -------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #image-droite /* Le logo de l'hippocampe qui était à droite du texte disparait */
+  {
+    display: none;
+  }
+
+  #image-droite-invisible /* Logo de l'hippocampe qui était masqué s'affiche. Pour suivre l'ordre de la maquette */
+  {
+    display: block;
+    padding-bottom: 30px;
+  }
+
+  #image-droite-invisible img /* Logo de l'hippocampe qui était masqué s'affiche. Pour suivre l'ordre de la maquette */
+  {
+    height: 250px;
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  -------------------------------- SECTION NOTRE EXPOSITION -------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #galerie
+  {
+    grid-template-columns: repeat(2, 1fr); /* La galerie passe sur 2 colonnes */
+    gap: 5px;                             /* Espace entre chaque élément de la grille */
+  }
+
+  #galerie img
+  {
+    max-width: 300px;     /* Ne dépasse jamais 300px de large */
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  --------------------------------- SECTION NOUS REJOINDRE --------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #nous-rejoindre
+  {
+    flex-direction: column; /* Passe les blocs les uns en dessous des autres */
+    height: auto;           /* La hauteur s’adapte au contenu */
+    text-align: center;     /* Centre le texte */
+    gap: 0px;               /* Plus d'espace entre les blocs enfants */
+    background-color: rgba(0, 90, 114);
+  }
+
+  #rejoindre, #formulaire
+  {
+    /* flex: none;          Supprime le comportement flexible */
+    width: 100%;        /* Chaque bloc prend toute la largeur */
+    background-color: rgb(255, 255, 255);
+    padding-bottom:30px;
+    border-right: none; /* Suppression de la barre de droite */
+  }
+
+  /* #formulaire
+  {
+    align-items: center; /* Centre le formulaire dans son bloc parent 
+  } */
+
+  #formulaire input
+  {
+    max-width: 400px; /* Champs un peu plus larges sur mobile */
+  }
+
+  #logo_fin /* Je fais disparaitre le logo de la fin. Pour suivre la maquette. */
+  {
+    display: none; 
+  }
+
+  footer /* Style du footer */
+  {
+    font-size: 16px;
+  }
+
+} /* Fin @media (max-width: 1000px) */
+
+
+
+
+                                  @media (max-width: 768px)
+{
+  /* --------------------------------------------------------------------------------------
+  ---------------------------------- MENU DU HAUT (FIXE) ----------------------------------
+  -------------------------------------------------------------------------------------- */
+
+ .menu
+  {
+    gap: 10px;             /* Espace entre chaque blocs */
+  }
+
+  .menu li a
+  {
+    font-size: 19px;
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  --------------------------------- PARAMETRAGE DES TEXTES --------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  /* Les titres */
+ #accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+  {
+    font-size: 3.5rem;                                /* Taille de la police */
+  }
+
+   #accueil-text p /* Texte sous "ÉCHOS MARINS" */
+  {
+    font-size: 1.6rem;        /* Taille du texte du sous-titre */
+  }
+
+  #texte-gauche h2, #texte-bas h2, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
+  {
+    font-size: 1.3rem;
+  }
+
+ 
+  /* --------------------------------------------------------------------------------------
+  -------------------------------- SECTION NOTRE EXPOSITION -------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #galerie img
+  {
+    max-width: 250px;     /* Ne dépasse jamais 250px de large */
+  }
+
+
+  footer /* Style du footer */
+  {
+    font-size: 14px;
+  }
+
+} /* Fin @media (max-width: 768px) */
+
+
+
+                                  @media (max-width: 600px)
+{
+  /* --------------------------------------------------------------------------------------
+  ---------------------------------- MENU DU HAUT (FIXE) ----------------------------------
+  -------------------------------------------------------------------------------------- */
+
+ .menu
+  {
+    gap: 0px;             /* Espace entre chaque blocs */
+  }
+
+  .menu li a
+  {
+    font-size: 14px;
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  --------------------------------- PARAMETRAGE DES TEXTES --------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  /* Les titres */
+ #accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+  {
+    font-size: 2.8rem;                                /* Taille de la police */
+  }
+
+   #accueil-text p /* Texte sous "ÉCHOS MARINS" */
+  {
+    font-size: 1.4rem;        /* Taille du texte du sous-titre */
+  }
+
+  #texte-gauche h2, #texte-bas h2, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
+  {
+    font-size: 1.1rem;
+  }
+
+ 
+  /* --------------------------------------------------------------------------------------
+  -------------------------------- SECTION NOTRE EXPOSITION -------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #galerie /* La galerie passe sur 1 colonne */
+  {
+    grid-template-columns: 1fr;
+  }
+
+  #galerie img
+  {
+    max-width: 300px;  /* Ne dépasse jamais 300px de large */
+  }
+
+
+#rejoindre h1
+{
+  font-size: 2.6rem;   /* Taille du titre "NOUS REJOINDRE */
+}
+
+#rejoindre p
+{
+  font-size: 1.1rem;   /* Taille du texte */
+}
+
+footer /* Style du footer */
+{
+  font-size: 10px;
+}
+
+} /* Fin @media (max-width: 600px) */
