@@ -640,3 +640,77 @@ footer /* Style du footer */
   }
 
 } /* Fin @media (max-width: 768px) */
+
+
+
+
+                                  @media (max-width: 600px)
+{
+  /* --------------------------------------------------------------------------------------
+  ---------------------------------- MENU DU HAUT (FIXE) ----------------------------------
+  -------------------------------------------------------------------------------------- */
+
+ .menu
+  {
+    gap: 0px;             /* Espace entre chaque blocs */
+  }
+
+  .menu li a
+  {
+    font-size: 14px;
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  --------------------------------- PARAMETRAGE DES TEXTES --------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  /* Les titres */
+ #accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+  {
+    font-size: 2.8rem;                                /* Taille de la police */
+  }
+
+   #accueil-text p /* Texte sous "ÉCHOS MARINS" */
+  {
+    font-size: 1.4rem;        /* Taille du texte du sous-titre */
+  }
+
+  #texte-gauche h2, #texte-bas h2, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
+  {
+    font-size: 1.1rem;
+  }
+
+ 
+  /* --------------------------------------------------------------------------------------
+  -------------------------------- SECTION NOTRE EXPOSITION -------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #galerie /* La galerie passe sur 1 colonne */
+  {
+    grid-template-columns: 1fr;
+  }
+
+  #galerie img
+  {
+    max-width: 300px;  /* Ne dépasse jamais 300px de large */
+  }
+
+
+#rejoindre h1
+{
+  font-size: 2.6rem;   /* Taille du titre "NOUS REJOINDRE */
+}
+
+#rejoindre p
+{
+  font-size: 1.1rem;   /* Taille du texte */
+}
+
+footer /* Style du footer */
+{
+  font-size: 10px;
+}
+
+} /* Fin @media (max-width: 600px) */
+
