@@ -585,3 +585,58 @@ footer /* Style du footer */
 
 
 
+
+                                  @media (max-width: 768px)
+{
+  /* --------------------------------------------------------------------------------------
+  ---------------------------------- MENU DU HAUT (FIXE) ----------------------------------
+  -------------------------------------------------------------------------------------- */
+
+ .menu
+  {
+    gap: 10px;             /* Espace entre chaque blocs */
+  }
+
+  .menu li a
+  {
+    font-size: 19px;
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  --------------------------------- PARAMETRAGE DES TEXTES --------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  /* Les titres */
+ #accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+  {
+    font-size: 3.5rem;                                /* Taille de la police */
+  }
+
+   #accueil-text p /* Texte sous "ÉCHOS MARINS" */
+  {
+    font-size: 1.6rem;        /* Taille du texte du sous-titre */
+  }
+
+  #texte-gauche h2, #texte-bas h2, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
+  {
+    font-size: 1.3rem;
+  }
+
+ 
+  /* --------------------------------------------------------------------------------------
+  -------------------------------- SECTION NOTRE EXPOSITION -------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #galerie img
+  {
+    max-width: 250px;     /* Ne dépasse jamais 250px de large */
+  }
+
+
+  footer /* Style du footer */
+  {
+    font-size: 14px;
+  }
+
+} /* Fin @media (max-width: 768px) */
