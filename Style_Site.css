@@ -385,5 +385,197 @@ footer /* Style du footer */
 }
 
 
+/* ----------------------------------------------------------------------------------------------------------------------
+----------------------------------------- PARTIE RESPONSIVE (pour petits écrans) ----------------------------------------
+---------------------------------------------------------------------------------------------------------------------- */
+
+
+                                  @media (max-width: 1400px)
+{
+
+  /* --------------------------------------------------------------------------------------
+  --------------------------------- PARAMETRAGE DES TEXTES --------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  .menu li a, .btn-billetterie /* Propriété du texte du menu */
+  {
+    font-size: 22px;                /* Taille de la police */
+  }
+
+} /* Fin @media (max-width: 1400px) */
+
+
+
+
+                                  @media (max-width: 1000px)
+{
+  /* --------------------------------------------------------------------------------------
+  ---------------------------------- MENU DU HAUT (FIXE) ----------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  .navbar /* Menu de navigation de l'accueil */
+  {
+    flex-direction: column;       /* Les 3 blocs : Logo, btn-billetterie et menu vont s'empiler verticalement */
+    align-items: center;          /* Les blocs seront centrés horizontalement dans la colonne */
+    gap: 10px;                    /* Espace entre chaque blocs */
+
+    background-color: rgba(0, 90, 114);
+    padding:0;                    /* Retrait des marges pour que le menu s'affiche sur tout la largeur */
+  }
+
+    .logo
+    {
+      order: 1;                     /* Le bloc "logo" s'affichera en 1er (au dessus) */
+    }
+    
+    .navbar img /* Logo en haut */
+    {
+      height: 130px;                 /* Hauteur du logo au dessus du bouton "BILLETERIE" */
+    }
+
+    .btn-billetterie
+    {
+      order: 2;                     /* Le bloc "btn-billetterie"" s'affichera sous le logo */
+
+      font-size: 22px;
+      background-color: rgb(255, 255, 255);
+      color: rgba(0, 90, 114);;
+    }
+
+    .menu
+    {
+      order: 3;                     /* Le bloc "menu"" s'affichera sous le bouton */
+      flex-direction: row;          /* Le menu reste à l'horizontale */
+      justify-content: center;      /* Centré horizontalement */
+      flex-wrap: nowrap;            /* Reste sur une seule ligne */
+      gap: 15px;
+      /* overflow-x: auto;             /* Si écran trop petit, permet le défilement horizontal */
+      
+      width: 100%;
+      padding: 20px ;
+      background-color: #ffffff;
+    }
+
+    
+
+  /* --------------------------------------------------------------------------------------
+  --------------------------------- PARAMETRAGE DES TEXTES --------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  /* Les titres */
+  #accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+  {
+    font-size: 4rem;                                /* Taille de la police */
+  }
+
+  #accueil-text p /* Texte sous "ÉCHOS MARINS" */
+  {
+    font-size: 2rem;        /* Taille du texte du sous-titre */
+  }
+
+
+  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
+  #texte-gauche h2, #texte-bas h2, #galerie figcaption
+  {
+    font-size: 1.4rem;
+  }
+
+
+  #accueil-text, #qui-sommes-nous, #notre-exposition, #nous-rejoindre /* Pour débuter sous le menu */
+  {
+    padding-top: 280px;
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  ------------------------------------ SECTION ACCUEIL ------------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #accueil-text
+  {
+    top: 50%;  /* centre verticalement */
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  ------------------------------- SECTION QUI SOMMES-NOUS ? -------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #image-droite /* Le logo de l'hippocampe qui était à droite du texte disparait */
+  {
+    display: none;
+  }
+
+  #image-droite-invisible /* Logo de l'hippocampe qui était masqué s'affiche. Pour suivre l'ordre de la maquette */
+  {
+    display: block;
+    padding-bottom: 30px;
+  }
+
+  #image-droite-invisible img /* Logo de l'hippocampe qui était masqué s'affiche. Pour suivre l'ordre de la maquette */
+  {
+    height: 250px;
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  -------------------------------- SECTION NOTRE EXPOSITION -------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #galerie
+  {
+    grid-template-columns: repeat(2, 1fr); /* La galerie passe sur 2 colonnes */
+    gap: 5px;                             /* Espace entre chaque élément de la grille */
+  }
+
+  #galerie img
+  {
+    max-width: 300px;     /* Ne dépasse jamais 300px de large */
+  }
+
+
+  /* --------------------------------------------------------------------------------------
+  --------------------------------- SECTION NOUS REJOINDRE --------------------------------
+  -------------------------------------------------------------------------------------- */
+
+  #nous-rejoindre
+  {
+    flex-direction: column; /* Passe les blocs les uns en dessous des autres */
+    height: auto;           /* La hauteur s’adapte au contenu */
+    text-align: center;     /* Centre le texte */
+    gap: 0px;               /* Plus d'espace entre les blocs enfants */
+    background-color: rgba(0, 90, 114);
+  }
+
+  #rejoindre, #formulaire
+  {
+    /* flex: none;          Supprime le comportement flexible */
+    width: 100%;        /* Chaque bloc prend toute la largeur */
+    background-color: rgb(255, 255, 255);
+    padding-bottom:30px;
+    border-right: none; /* Suppression de la barre de droite */
+  }
+
+  /* #formulaire
+  {
+    align-items: center; /* Centre le formulaire dans son bloc parent 
+  } */
+
+  #formulaire input
+  {
+    max-width: 400px; /* Champs un peu plus larges sur mobile */
+  }
+
+  #logo_fin /* Je fais disparaitre le logo de la fin. Pour suivre la maquette. */
+  {
+    display: none; 
+  }
+
+  footer /* Style du footer */
+  {
+    font-size: 16px;
+  }
+
+} /* Fin @media (max-width: 1000px) */
 
 
