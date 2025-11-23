@@ -91,7 +91,7 @@ body /* Police de caractère principale  */
 }
 
 /* Les titres */
-#accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+#accueil-text h1, #qui-sommes-nous h2, #notre-exposition h2
 {
   font-size: 6rem;                                /* Taille de la police */
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour lisibilité */
@@ -99,7 +99,7 @@ body /* Police de caractère principale  */
 }
 
 
-#texte-gauche h2, #texte-bas h2, #galerie figcaption /* Textes sous "Qui sommes-nous ?" et Légendes des images de "Notre exposition" */
+#texte-gauche h3, #texte-bas h3, #galerie figcaption /* Textes sous "Qui sommes-nous ?" et Légendes des images de "Notre exposition" */
 {
   font-weight: 400;         /* 400 = regular (pas bold) */
   font-size: 1.9rem;        /* Taille du texte du sous-titre */
@@ -150,7 +150,7 @@ body /* Police de caractère principale  */
   transform: translate(-50%, -50%); /* Ajuste pour être centré parfaitement */
 }
 
-#accueil-text p /* Texte sous "ÉCHOS MARINS" */
+#accueil-text h2 /* Texte sous "ÉCHOS MARINS" */
 {
   font-size: 3rem;        /* Taille du texte du sous-titre */
   margin-top: 10px;       /* Espace au-dessus du paragraphe */
@@ -264,7 +264,7 @@ body /* Police de caractère principale  */
   border-right: 3px solid black; /* Bordure à droite : Épaisseur + style + couleur */
 }
 
-#rejoindre h1
+#rejoindre h2
 {
   font-size: 3rem;      /* Taille du titre "NOUS REJOINDRE */
   margin-bottom: 10px;  /* Espace sous le titre */
@@ -468,19 +468,19 @@ footer /* Style du footer */
   -------------------------------------------------------------------------------------- */
 
   /* Les titres */
-  #accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+  #accueil-text h1, #qui-sommes-nous h2, #notre-exposition h2
   {
     font-size: 4rem;                                /* Taille de la police */
   }
 
-  #accueil-text p /* Texte sous "ÉCHOS MARINS" */
+  #accueil-text h2 /* Texte sous "ÉCHOS MARINS" */
   {
     font-size: 2rem;        /* Taille du texte du sous-titre */
   }
 
 
   /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
-  #texte-gauche h2, #texte-bas h2, #galerie figcaption
+  #texte-gauche h3, #texte-bas h3, #galerie figcaption
   {
     font-size: 1.4rem;
   }
@@ -608,17 +608,17 @@ footer /* Style du footer */
   -------------------------------------------------------------------------------------- */
 
   /* Les titres */
- #accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+ #accueil-text h1, #qui-sommes-nous h2, #notre-exposition h2
   {
     font-size: 3.5rem;                                /* Taille de la police */
   }
 
-   #accueil-text p /* Texte sous "ÉCHOS MARINS" */
+   #accueil-text h2 /* Texte sous "ÉCHOS MARINS" */
   {
     font-size: 1.6rem;        /* Taille du texte du sous-titre */
   }
 
-  #texte-gauche h2, #texte-bas h2, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
+  #texte-gauche h3, #texte-bas h3, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
   {
     font-size: 1.3rem;
   }
@@ -666,17 +666,17 @@ footer /* Style du footer */
   -------------------------------------------------------------------------------------- */
 
   /* Les titres */
- #accueil-text h1, #qui-sommes-nous h1, #notre-exposition h1
+ #accueil-text h1, #qui-sommes-nous h2, #notre-exposition h2
   {
     font-size: 2.8rem;                                /* Taille de la police */
   }
 
-   #accueil-text p /* Texte sous "ÉCHOS MARINS" */
+   #accueil-text h2 /* Texte sous "ÉCHOS MARINS" */
   {
     font-size: 1.4rem;        /* Taille du texte du sous-titre */
   }
 
-  #texte-gauche h2, #texte-bas h2, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
+  #texte-gauche h3, #texte-bas h3, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
   {
     font-size: 1.1rem;
   }
@@ -697,7 +697,7 @@ footer /* Style du footer */
   }
 
 
-#rejoindre h1
+#rejoindre h2
 {
   font-size: 2.6rem;   /* Taille du titre "NOUS REJOINDRE */
 }
@@ -713,4 +713,5 @@ footer /* Style du footer */
 }
 
 } /* Fin @media (max-width: 600px) */
+
 
