@@ -99,7 +99,7 @@ body /* Police de caractère principale  */
 }
 
 
-#texte-gauche h3, #texte-bas h3, #galerie figcaption /* Textes sous "Qui sommes-nous ?" et Légendes des images de "Notre exposition" */
+#texte-gauche p, #texte-bas p, #galerie figcaption /* Textes sous "Qui sommes-nous ?" et Légendes des images de "Notre exposition" */
 {
   font-weight: 400;         /* 400 = regular (pas bold) */
   font-size: 1.9rem;        /* Taille du texte du sous-titre */
@@ -480,7 +480,7 @@ footer /* Style du footer */
 
 
   /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
-  #texte-gauche h3, #texte-bas h3, #galerie figcaption
+  #texte-gauche p, #texte-bas p, #galerie figcaption
   {
     font-size: 1.4rem;
   }
@@ -618,7 +618,7 @@ footer /* Style du footer */
     font-size: 1.6rem;        /* Taille du texte du sous-titre */
   }
 
-  #texte-gauche h3, #texte-bas h3, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
+  #texte-gauche p, #texte-bas p, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
   {
     font-size: 1.3rem;
   }
@@ -676,7 +676,7 @@ footer /* Style du footer */
     font-size: 1.4rem;        /* Taille du texte du sous-titre */
   }
 
-  #texte-gauche h3, #texte-bas h3, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
+  #texte-gauche p, #texte-bas p, #galerie figcaption  /* Textes sous "Qui sommes-nous ?" et légendes des images de "Notre exposition" */
   {
     font-size: 1.1rem;
   }
@@ -713,5 +713,6 @@ footer /* Style du footer */
 }
 
 } /* Fin @media (max-width: 600px) */
+
 
 
