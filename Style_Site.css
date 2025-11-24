@@ -99,12 +99,11 @@ body /* Police de caractère principale  */
 }
 
 
-#texte-gauche p, #texte-bas p, #galerie figcaption /* Textes sous "Qui sommes-nous ?" et Légendes des images de "Notre exposition" */
+#texte-gauche h3, #texte-bas p, #galerie figcaption /* Textes sous "Qui sommes-nous ?" et Légendes des images de "Notre exposition" */
 {
   font-weight: 400;         /* 400 = regular (pas bold) */
   font-size: 1.9rem;        /* Taille du texte du sous-titre */
   margin-bottom: 20px;      /* espace sous chaque h2 */
-  text-shadow: 2px 2px 1px rgba(4, 243, 4, 0.5);
 }
 
 
@@ -193,7 +192,7 @@ body /* Police de caractère principale  */
   height:100%;      /* Le bloc prend la hauteur de son parent */
   width: auto;      /* Largeur proportionnelle à la hauteur */
   max-width: 100%;  /* Ne dépasse jamais la largeur du conteneur */
-  min-width: 200px; /* LArgeur minimum de l'image */
+  min-width: 200px; /* Largeur minimum de l'image */
 }
 
 #texte-bas
@@ -714,6 +713,7 @@ footer /* Style du footer */
 }
 
 } /* Fin @media (max-width: 600px) */
+
 
 
 
