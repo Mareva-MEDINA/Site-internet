@@ -104,6 +104,7 @@ body /* Police de caractère principale  */
   font-weight: 400;         /* 400 = regular (pas bold) */
   font-size: 1.9rem;        /* Taille du texte du sous-titre */
   margin-bottom: 20px;      /* espace sous chaque h2 */
+  text-shadow: 2px 2px 1px rgba(4, 243, 4, 0.5);
 }
 
 
@@ -713,6 +714,7 @@ footer /* Style du footer */
 }
 
 } /* Fin @media (max-width: 600px) */
+
 
 
 
