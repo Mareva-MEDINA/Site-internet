@@ -99,7 +99,7 @@ body /* Police de caractère principale  */
 }
 
 
-#texte-gauche h3, #texte-bas p, #galerie figcaption /* Textes sous "Qui sommes-nous ?" et Légendes des images de "Notre exposition" */
+#texte-gauche p, #texte-bas p, #galerie figcaption /* Textes sous "Qui sommes-nous ?" et Légendes des images de "Notre exposition" */
 {
   font-weight: 400;         /* 400 = regular (pas bold) */
   font-size: 1.9rem;        /* Taille du texte du sous-titre */
@@ -713,6 +713,7 @@ footer /* Style du footer */
 }
 
 } /* Fin @media (max-width: 600px) */
+
 
 
 
