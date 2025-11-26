@@ -189,7 +189,7 @@ body /* Police de caractère principale  */
 
 #image-droite img
 {
-  height:100%;      /* Le bloc prend la hauteur de son parent */
+  /*height:100%;      /* Le bloc prend la hauteur de son parent */
   width: auto;      /* Largeur proportionnelle à la hauteur */
   max-width: 100%;  /* Ne dépasse jamais la largeur du conteneur */
   min-width: 200px; /* Largeur minimum de l'image */
@@ -713,6 +713,7 @@ footer /* Style du footer */
 }
 
 } /* Fin @media (max-width: 600px) */
+
 
 
 
