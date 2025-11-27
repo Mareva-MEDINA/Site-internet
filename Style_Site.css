@@ -154,6 +154,7 @@ body /* Police de caractère principale  */
 {
   font-size: 3rem;        /* Taille du texte du sous-titre */
   margin-top: 10px;       /* Espace au-dessus du paragraphe */
+  font-weight: normal     /* Pas de gras */
 }
 
 #image-droite-invisible /* Logo de l'hippocampe  qui ne s'affiche qu'en Responsive (sous le texte). L'autre sera masqué en Responsive pour suivre l'ordre de la maquette */
@@ -226,8 +227,7 @@ body /* Police de caractère principale  */
 {
   width: 100%;                                            /* L’image prend toute la largeur disponible de son conteneur */
   max-width: 350px;                                       /* Nee dépasse jamais 350px de large */
-  border: 6px solid #fff;                               /* Bande blanche autour des images */
-  border-radius: 6px;                                     /* Arrondit les coins des images */
+  border: 10px solid #fff;                               /* Bande blanche autour des images */
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);              /* Ajoute une ombre douce sous les images */
   transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Permet de rendre fluide les animations au survol */
 }
@@ -713,6 +713,7 @@ footer /* Style du footer */
 }
 
 } /* Fin @media (max-width: 600px) */
+
 
 
 
